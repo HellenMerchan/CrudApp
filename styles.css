@@ -1,0 +1,131 @@
+/* fuente importada de Google Fonts */
+@font-face {
+    font-family: carving;
+    src: url(MADECarvingSoftPERSONALUSE-Regular.otf);
+}
+/* Se reinician los espacios que se agregan por defecto, quedan en 0 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* todo texto tendrá la fuente Montserrat, botones, entradas de texto, body, etc. */
+body,
+button,
+input {
+    font-family: "carving", sans-serif;
+}
+
+body {
+    max-width: 100dvw;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100dvh;
+}
+
+main {
+    max-width: 100%;
+    display: grid;
+    place-content: center;
+}
+
+/* Estilo para el contenedor del header */
+.header {
+    padding: 1px; /* Espaciado alrededor del logo */
+    background-color: #2c332c;
+    width: 100%; /* Fondo blanco para el área del logo (opcional) */
+    z-index: 1000; /* Para asegurarte de que el logo esté sobre otros elementos */
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilo para el logo */
+.logo {
+    width: 250px; /* Ajusta el tamaño del logo según sea necesario */
+    height: auto; /* Mantiene la relación de aspecto */
+    /* margin-top: 0px;
+    margin-left: -100px; */
+}
+
+/* La clase container estará centrada, que es el contenedor "padre" de todo el formulario */
+.container {
+    max-width: 800px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin: auto;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px 0 black;
+}
+
+.crud_title {
+    text-align: center;
+    color: rgb(100, 100, 114);
+    margin: 3rem;
+}
+
+.crud_form {
+    display: flex;
+    margin: 10px 0;
+}
+
+/* Tamaño de fuente de las entradas a 1rem unidad relativa, equivale al tamaño por defecto del navegador, 2rem = 18px * 2  */
+.form_input {
+    flex: 1;
+    padding: 5px;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+/* Estilos al botón "padre" o en general  */
+.button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+/* efecto al pasar el mouse sobre el botón, crece 1.2  */
+.button:hover {
+    transform: scale(1.2);
+}
+
+/* Estilos especificos a "botón "primary" pero conserva propiedades del botón general "padre" */
+.button--primary {
+    background-color: #7fef91;
+}
+
+/* Estilos especificos a "botón "secundary" que se crean automaticamente en la celda "acciones"*/
+.button--secundary {
+    background-color: #7fef91;
+}
+
+/* Estilos especificos a "botón "terciary" que se crean automaticamente en la celda "acciones"*/
+/* .button--terciary {
+    background-color: #dc3545;
+    color: #f0f0f0;
+} */
+
+/* Estilos a la tabla del Crud */
+.crudtable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table_header,
+.table_body td {
+    border: 1px solid #cccccc;
+    padding: 5px;
+}
+
+.table_header {
+    background-color: #2c332c;
+    color: white;
+}
+
+/* Estilos para el tercer elemento de la tablebody lo que serán los botones de la celda "acciones" */
+.table_body td:nth-child(3) {
+    display: flex;
+    justify-content: space-around;
+}

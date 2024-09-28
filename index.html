@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Control de Acceso</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="icon" href="LogoRecosad.png" type="image/x-icon" />
+    </head>
+
+    <body>
+        <header class="header">
+            <img src="LogoRecosad.png" alt="Logo" class="logo" />
+        </header>
+        <main class="container">
+            <h2 class="crud_title">Registro de Usuarios</h2>
+            <section class="crud">
+                <!-- Creamos un formulario para ingresar datos. Etiquetas con id para modificar en Js y Class en CSS -->
+                <form id="formRegister" class="crud_form">
+                    <input
+                        type="text"
+                        placeholder="Nombre Completo"
+                        id="nameinput"
+                        class="form_input"
+                    />
+                    <input
+                        type="email"
+                        placeholder="Email"
+                        id="emailinput"
+                        class="form_input"
+                    />
+                    <input type="hidden" id="fechaHora" name="fechaHora" />
+                    <input type="hidden" id="ubicacion" name="ubicacion" />
+
+                    <!-- Este botón tiene una clase general "button" y agregamos modificadores como button--primary -->
+                    <button
+                        type="submit"
+                        id="submitbutton"
+                        class="button button--primary"
+                    >
+                        Agregar
+                    </button>
+                </form>
+
+                <!-- Creamos una tabla para que se visualicen los datos -->
+                <table class="crudtable">
+                    <thead>
+                        <tr>
+                            <th class="table_header">Nombre Completo</th>
+                            <th class="table_header">E-mail</th>
+                            <th class="table_header">Fecha /Hora</th>
+                            <th class="table_header">Ubicación</th>
+                            <th class="table_header">Acción</th>
+                        </tr>
+                    </thead>
+
+                    <!-- Creamos el cuerpo de la tabla que se agrega o elimina automaticamente -->
+                    <tbody id="tablebody" class="table_body"></tbody>
+                </table>
+            </section>
+        </main>
+        <script src="app.js"></script>
+    </body>
+</html>
